@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UiTM Student e-Profile</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-section {
+            background-color: #f8f9fa;
+            padding: 100px 0;
+        }
+
+        
+        .navbar-brand {
+            font-weight: 700;
+        }
+        .btn-custom {
+            background-color: #000;
+            color: #fff;
+            border-radius: 30px;
+            padding: 10px 25px;
+        }
+        .tagline {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .sub-tagline {
+            font-size: 1.5rem;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                 <img src="img/logouitm.png" alt="USP logo" width="50px">  UITM STUDENT E-PROFILE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <ul class="nav">
+
+
+            <!-- Hire a Designer Dropdown -->
+            <li class="nav-item dropdown">
+                <ul class="navbar-nav me-auto">
+                <a class="nav-link dropdown-toggle" href="#"data-bs-toggle="dropdown">
+                    Profile
+                </a>
+            
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="studentprofile.html">
+                            <i class="bi bi-search me-2"></i> Student Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="academicrecord.html">
+                            <i class="bi bi-cart me-2"></i> Academic Records
+                        </a>
+                    </li>
+                    <li>
+                      
+
+
+
+                   </ul>
+                   </li>
+                   </ul>
+                   </ul>
+               
+
+<div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <ul class="nav">
+                    </div>
+                    </ul>
+                
+
+                <div class="d-flex align-items-center">
+                     <i class="bi bi-person-circle" style="font-size: 2rem; padding-right: 10%;"></i> <!-- Circle person -->
+                     <a href="index.html" class="btn btn-custom">Logout</a>
+                
+                </div>
+            </div>
+        </div>
+    </nav>
+        
+
+ <!-- Page Content -->
+<div class="card text-white">
+  <img src="img/bg.png" class="card-img" width="200px" height="250px"  alt="Background">
+  <div class="card-img-overlay">
+        <div class="container">
+            <div class="row align-items-center">
+ <div class="container mt-4">
+<figure class="text-center">
+  <p style ="font-family: 'Rubik', sans-serif; font-weight: bold; font-size: 300%;">STUDENT ACADEMIC RECORDS</p>
+  <p style ="font-family: 'Rubik', sans-serif; font-size: 100%;">Access your complete academic history including courses taken, grades, and academic standing.</p>
+</figure>
+</div>
+</div>
+</div>
+  </div>
+</div>
+
+ <style>
+        .card {
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .table-responsive {
+            max-height: 500px;
+        }
+        .badge-gpa {
+            font-size: 0.9em;
+        }
+        .filter-section {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+  
+        <!-- Filter Section -->
+         <div class="container mt-4">
+        <div class="row filter-section p-4 mb-4">
+            <div class="col-md-6 mb-3 mb-md-0">
+                <label for="programFilter" class="form-label">Program</label>
+                <select class="form-select" id="programFilter">
+                    <option value="">All Programs</option>
+                    <option value="Computer Science">Content Management</option>
+                    <option value="Business">System Management</option>
+                    <option value="Engineering">Library Management</option>
+                    <option value="Engineering">Film</option>
+                    <option value="Engineering">Theater</option>
+                    <option value="Engineering">Animation</option>
+                </select>
+            </div>
+            <div class="col-md-6 mb-3 mb-md-0">
+                <label for="semesterFilter" class="form-label">Semester</label>
+                <select class="form-select" id="semesterFilter">
+                    <option value="">All Semesters</option>
+                    <option value="1">Semester 1</option>
+                    <option value="2">Semester 2</option>
+                    <option value="3">Semester 3</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+        </div>
+        </div>
+         
+
+        <!-- View Toggle -->
+        <div class="d-flex justify-content-end mb-3">
+        </div>
+<br>
+        <!-- Table View -->
+        <div id="tableView">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>ID</th>
+                            <th>Student Name</th>
+                            <th>Program</th>
+                            <th>Semester</th>
+                            <th>Courses Taken</th>
+                            <th>CGPA</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Student 1 -->
+                        <tr>
+                            <td>2023156789</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    Nor Izzati Binti Mohd Shukri
+                                </div>
+                            </td>
+                            <td>System Management</td>
+                            <td>3</td>
+                            <td>10</td>
+                            <td>
+                                <span class="badge bg-success badge-gpa">3.75</span>
+                            </td>
+                            <td><span class="badge bg-success">Active</span></td>
+                            <td>
+                                
+                        </tr>
+                        
+                        <!-- Student 2 -->
+                        <tr>
+                            <td>2023156790</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                   
+                                    Nur Najwa Syazwani Binti Abdul Aziz
+                                </div>
+                            </td>
+                            <td>Content Management</td>
+                            <td>3</td>
+                            <td>8</td>
+                            <td>
+                                <span class="badge bg-warning text-dark badge-gpa">3.25</span>
+                            </td>
+                            <td><span class="badge bg-success">Active</span></td>
+                            <td>
+                            
+                        </tr>
+                        
+                   
+                        <!-- Student 3 -->
+                        <tr>
+                            <td>2023156791</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    
+                                    Muhammad Luqman Hafiz Bin Mat Nasir
+                                </div>
+                            </td>
+                            <td>Library Management</td>
+                            <td>3</td>
+                            <td>10</td>
+                            <td>
+                                <span class="badge bg-primary badge-gpa">3.50</span>
+                            </td>
+                            <td><span class="badge bg-success">Active</span></td>
+                            <td>
+                                
+                        </tr>
+                        
+                        <!-- Student 4 -->
+                        <tr>
+                            <td>2023156792</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                   
+                                    Nur Iman Hakim Bin Kamaruddin
+                                </div>
+                            </td>
+                            <td>Content Management</td>
+                            <td>3</td>
+                            <td>10</td>
+                            <td>
+                                <span class="badge bg-success badge-gpa">3.80</span>
+                            </td>
+                            <td><span class="badge bg-success">Active</span></td>
+                            <td>
+                                
+                        </tr>
+                        
+                        <!-- Student 5 -->
+                        <tr>
+                            <td>2023156793</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    
+                                    Nur Aisyah Binti Ahmad
+                                </div>
+                            </td>
+                            <td>System Management</td>
+                            <td>1</td>
+                            <td>7</td>
+                            <td>
+                                <span class="badge bg-danger badge-gpa">2.75</span>
+                            </td>
+                            <td><span class="badge bg-warning text-dark">Probation</span></td>
+                            <td>
+                               
+                        </tr>
+                        
+                        <!-- Student 6 -->
+                        <tr>
+                            <td>2023156794</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                  
+                                    Muhammad Danish Bin Azlan
+                                </div>
+                            </td>
+                            <td>Animation</td>
+                            <td>3</td>
+                            <td>7</td>
+                            <td>
+                                <span class="badge bg-success badge-gpa">3.90</span>
+                            </td>
+                            <td><span class="badge bg-success">Active</span></td>
+                            <td>
+                                
+                        </tr>
+                        
+                        <!-- Student 7 -->
+                        <tr>
+                            <td>2023156795</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                  
+                                    Muhammad Fakhrul Naim Bin Kamaruddin
+                                </div>
+                            </td>
+                            <td>Film</td>
+                            <td>2</td>
+                            <td>6</td>
+                            <td>
+                                <span class="badge bg-primary badge-gpa">3.45</span>
+                            </td>
+                            <td><span class="badge bg-success">Active</span></td>
+                            <td>
+                                
+                        </tr>
+                        
+                        <!-- Student 8 -->
+                        <tr>
+                            <td>2023156796</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    
+                                    Muhammad Amri Haqim Bin Shah
+                                </div>
+                            </td>
+                            <td>Theater</td>
+                            <td>3</td>
+                            <td>6</td>
+                            <td>
+                                <span class="badge bg-warning text-dark badge-gpa">3.20</span>
+                            </td>
+                            <td><span class="badge bg-success">Active</span></td>
+                            <td>
+                                
+                        </tr>
+                        
+                        <!-- Student 9 -->
+                        <tr>
+                            <td>2023156797</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                  
+                                    Nur Amielia Binti Zai Hamzah
+                                </div>
+                            </td>
+                            <td>Film</td>
+                            <td>1</td>
+                            <td>7</td>
+                            <td>
+                                <span class="badge bg-primary badge-gpa">3.80</span>
+                            </td>
+                            <td><span class="badge bg-success">Active</span></td>
+                            <td>
+                            
+                        </tr>
+                        
+                        <!-- Student 10 -->
+                        <tr>
+                            <td>2023156798</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                   
+                                    Nursyahirah Binti Azmi
+                                </div>
+                            </td>
+                            <td>Animation</td>
+                            <td>3</td>
+                            <td>10</td>
+                            <td>
+                                <span class="badge bg-success badge-gpa">3.85</span>
+                            </td>
+                            <td><span class="badge bg-success">Active</span></td>
+                            <td>
+                                
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Pagination -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center mt-4">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+         </div>
+       
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Toggle between table and card view
+        document.getElementById('tableViewBtn').addEventListener('click', function() {
+            document.getElementById('tableView').classList.remove('d-none');
+            document.getElementById('cardView').classList.add('d-none');
+            this.classList.add('active');
+            document.getElementById('cardViewBtn').classList.remove('active');
+        });
+        
+        document.getElementById('cardViewBtn').addEventListener('click', function() {
+            document.getElementById('tableView').classList.add('d-none');
+            document.getElementById('cardView').classList.remove('d-none');
+            this.classList.add('active');
+            document.getElementById('tableViewBtn').classList.remove('active');
+        });
+        
+        // Simple filter functionality (would need enhancement for production)
+        document.getElementById('programFilter').addEventListener('change', function() {
+            const filterValue = this.value.toLowerCase();
+            const rows = document.querySelectorAll('tbody tr');
+            
+            rows.forEach(row => {
+                const program = row.cells[2].textContent.toLowerCase();
+                if (filterValue === '' || program.includes(filterValue)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+ <!-- Footer -->
+   <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-4">
+                    <h5>UITM Student E-Profile</h5>
+                    <p>The official digital profile platform for Universiti Teknologi MARA students.</p>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 md-4">
+                    
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i> eprofile@uitm.edu.my</li>
+                        <li><i class="fas fa-phone me-2"></i> +603-5544 2000</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> UITM Shah Alam</li>
+                    </ul>
+                </div>
+            
+                <div class="col-lg-4 col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-black me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-black me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-black me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-black"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Universiti Teknologi MARA. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
