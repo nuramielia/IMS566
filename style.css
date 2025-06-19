@@ -1,0 +1,168 @@
+.title {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: rgb(10, 8, 8);
+}
+
+.title1 {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+}
+
+.bg{
+    background-color: rgb(190, 190, 190);
+
+}
+.navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background-color: rgba(255, 255, 255, 0.98) !important;
+            backdrop-filter: blur(20px);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .nav-link {
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #000000;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-top: 0.5rem;
+        }
+        .search-btn {
+            border-radius: 50px;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .content-box {
+            padding: 1;
+            height: 100%;
+            flex-direction: column;
+        }
+        .img-container {
+            overflow: hidden;
+            height: 50%;
+        }
+        .img-container img {
+            width: 80%;
+            height: 50%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .img-container:hover img {
+            transform: scale(1.05);
+        }
+        @media (max-width: 767.98px) {
+            .img-container {
+                height: 300px; /* Fixed height on mobile */
+            }
+            
+        }
+
+  .card {
+            height: 100%;
+            transition: transform 0.3s;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+        .btn-learn-more {
+            background-color: #000;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        .btn-learn-more:hover {
+            background-color: #000;
+            color: white;
+        }
+
+        .color{
+            color: #000;
+        }
+
+ .dropdown-menu {
+            width: 300px;
+            padding: 15px;
+        }
+        .dropdown-item {
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+        .dropdown-divider {
+            margin: 10px 0;
+        }
+        .nav-link {
+            font-weight: 500;
+        }
+
+        .card {
+            transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 102, 161, 0.8), rgba(0, 102, 161, 0.8)), 
+                        url('https://www.uitm.edu.my/images/banner/uitm-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            color: rgb(0, 0, 0);
+            padding: 100px 0;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--uitm-blue);
+            margin-bottom: 1rem;
+        }
+
+ 
